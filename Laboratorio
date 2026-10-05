@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16213e">
+  <title>Laboratorio de Mezclas | 6.º Grado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="game-container">
+
+    <!-- PANTALLA DE INICIO -->
+    <section id="start-screen" class="screen active">
+      <div class="lab-icon">🧪</div>
+
+      <p class="eyebrow">CIENCIAS NATURALES · 6.º GRADO</p>
+
+      <h1>Laboratorio<br><span>de Mezclas</span></h1>
+
+      <p class="intro">
+        El laboratorio perdió sus etiquetas.<br>
+        ¿Podés descubrir cuáles son homogéneas y cuáles heterogéneas?
+      </p>
+
+      <div class="mission-box">
+        <span>🔬</span>
+        <div>
+          <strong>Tu misión</strong>
+          <p>Clasificar correctamente las mezclas y convertirte en un experto.</p>
+        </div>
+      </div>
+
+      <button id="start-btn" class="main-btn">
+        COMENZAR EXPERIMENTO 🚀
+      </button>
+
+      <p class="small-text">10 desafíos · ¡Poné a prueba tus conocimientos!</p>
+    </section>
+
+
+    <!-- PANTALLA DEL JUEGO -->
+    <section id="game-screen" class="screen">
+
+      <header class="game-header">
+        <div class="progress-info">
+          <span>DESAFÍO</span>
+          <strong><span id="question-number">1</span>/10</strong>
+        </div>
+
+        <div class="score-box">
+          ⭐ <span id="score">0</span>
+        </div>
+      </header>
+
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+
+      <div class="streak">
+        🔥 Racha: <strong id="streak">0</strong>
+      </div>
+
+      <article class="question-card">
+
+        <div class="sample-icon" id="sample-icon">🥤</div>
+
+        <p class="question-label">MUESTRA DE LABORATORIO</p>
+
+        <h2 id="question-text">
+          Agua con sal
+        </h2>
+
+        <p id="question-description" class="description">
+          La sal se disuelve completamente en el agua.
+        </p>
+
+        <p class="question">
+          ¿Qué tipo de mezcla es?
+        </p>
+
+        <div class="answers">
+
+          <button class="answer-btn homogeneous" data-answer="homogenea">
+            <span class="answer-icon">🔵</span>
+            <span>
+              <strong>Homogénea</strong>
+              <small>Se observa como una sola fase.</small>
+            </span>
+          </button>
+
+          <button class="answer-btn heterogeneous" data-answer="heterogenea">
+            <span class="answer-icon">🟠</span>
+            <span>
+              <strong>Heterogénea</strong>
+              <small>Se distinguen diferentes fases.</small>
+            </span>
+          </button>
+
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+
+      </article>
+
+    </section>
+
+
+    <!-- PANTALLA FINAL -->
+    <section id="result-screen" class="screen">
+
+      <div id="result-icon" class="result-icon">🏆</div>
+
+      <p class="eyebrow">EXPERIMENTO FINALIZADO</p>
+
+      <h1 id="result-title">¡Excelente científico!</h1>
+
+      <p id="result-message" class="result-message">
+        Lograste clasificar las mezclas correctamente.
+      </p>
+
+      <div class="final-score">
+        <span>PUNTAJE</span>
+        <strong id="final-score">0</strong>
+        <small>puntos</small>
+      </div>
+
+      <div class="stats">
+        <div>
+          <strong id="correct-answers">0</strong>
+          <span>Correctas</span>
+        </div>
+
+        <div>
+          <strong id="wrong-answers">0</strong>
+          <span>Incorrectas</span>
+        </div>
+
+        <div>
+          <strong id="best-streak">0</strong>
+          <span>Mejor racha</span>
+        </div>
+      </div>
+
+      <div id="scientist-level" class="level">
+        🔬 APRENDIZ DE LABORATORIO
+      </div>
+
+      <button id="restart-btn" class="main-btn">
+        VOLVER A EXPERIMENTAR 🔄
+      </button>
+
+      <p class="footer-text">
+        Materia y mezclas · Ciencias Naturales · 6.º grado
+      </p>
+
+    </section>
+
+  </main>
+
+  <div id="confetti-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
